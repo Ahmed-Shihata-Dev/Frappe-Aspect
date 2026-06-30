@@ -1,0 +1,19 @@
+{
+ "content": null,
+ "creation": "2024-04-10 17:38:49.604230",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2024-04-10 17:38:49.604230",
+ "modified_by": "Administrator",
+ "module": "Frappe Aspect",
+ "name": "frappe_aspect",
+ "owner": "Administrator",
+ "page_name": "frappe_aspect",
+ "roles": [],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "Frappe Aspect"
+}
