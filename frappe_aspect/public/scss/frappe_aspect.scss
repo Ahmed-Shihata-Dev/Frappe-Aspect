@@ -1,0 +1,56 @@
+/* path/to/your/app/webpane/page/frappe_aspect/frappe_aspect.css */
+.frappe-aspect-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.frappe-aspect-header {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.frappe-aspect-body {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    overflow: hidden;
+}
+
+.frappe-aspect-list {
+    flex: 0 0 auto;
+    width: 50%;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid #ddd;
+}
+.o_frappe_aspect_splitter {
+    flex: 0 0 auto;
+    width: 8px;
+    background: url(/assets/frappe_aspect/img/vsizegrip.png) center center no-repeat lightgray;
+    min-height: 200px;
+    cursor: col-resize;
+
+    &:hover {
+        background: url(/assets/frappe_aspect/img/vsizegrip.png) center center no-repeat darken(lightgray, 15%);
+    }
+}
+#frappe-aspect-list .page-form{
+    flex-direction: column;
+}
+.frappe-aspect-form {
+    flex: 1 1 auto;
+    width: 70000%;
+    height: 100vh;
+    overflow: auto;
+    .form-tabs-list{
+        position: static;
+    }
+}
+#frappe-aspect-form .page-head{
+    top: 0px !important;
+}
+#page-frappe_aspect > .page-head{
+    z-index: 7;
+}
