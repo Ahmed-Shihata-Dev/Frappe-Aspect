@@ -1,12 +1,27 @@
 <div class="frappe-aspect-container">
-    <script src="/assets/frappe_aspect/js/jquery-resizable.js"></script>
-    <div class="frappe-aspect-body">
-        <div class="frappe-aspect-list" id="frappe-aspect-list">
-            <!-- List view will be rendered here -->
-        </div>
-        <div class="o_frappe_aspect_splitter"></div>
-        <div class="frappe-aspect-form" id="frappe-aspect-form">
-            <!-- Form view will be rendered here -->
-        </div>
-    </div>
+	<div class="frappe-aspect-body">
+		<div class="frappe-aspect-list" id="frappe-aspect-list">
+			<!-- List view will be rendered here -->
+		</div>
+		<div class="o_frappe_aspect_splitter">
+			<button type="button" class="btn btn-default btn-xs frappe-aspect-reset-pane" title="">
+				<svg class="icon icon-xs" aria-hidden="true">
+					<use href="#es-line-header-column"></use>
+				</svg>
+			</button>
+		</div>
+		<div class="frappe-aspect-form" id="frappe-aspect-form">
+			<div class="frappe-aspect-form-empty" id="frappe-aspect-form-empty">
+				<div class="empty-state-content">
+					<div class="empty-icon">
+						<svg class="icon icon-xl" aria-hidden="true">
+							<use href="#icon-select"></use>
+						</svg>
+					</div>
+					<div class="empty-title"></div>
+					<div class="empty-hint"></div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

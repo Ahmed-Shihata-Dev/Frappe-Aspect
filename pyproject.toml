@@ -1,7 +1,7 @@
 [project]
 name = "frappe_aspect"
 authors = [
-    { name = "kanakinfosystems llp.", email = "info@kanakinfosystems.com"}
+    { name = "Ahmed Shihata", email = "ahmedshihata1305@gmail.com"}
 ]
 description = "Frappe Aspect"
 requires-python = ">=3.10"

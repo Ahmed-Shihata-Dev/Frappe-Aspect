@@ -1,8 +1,12 @@
 ## Frappe Aspect
 
+**Developer:** Ahmed Shihata  
+**Email:** ahmedshihata1305@gmail.com  
+**Copyright:** 2026
+
 ## Overview
 
-The Frappe Aspect App for ERPNext is designed to enhance user productivity by providing a split-screen interface that combines a list view and a form view. This allows users to navigate through records and view or edit details without switching between different screens. The app is especially useful for users who frequently need to access and modify data, as it streamlines the workflow and reduces the time spent navigating through the ERP system.
+Frappe Aspect adds a resizable split-screen workspace for ERPNext and Frappe — a list on one side and an editable form on the other — so you can browse and edit records without switching pages.
 
 ## Features
 
@@ -16,10 +20,10 @@ Customizable Layout: Users can adjust the split ratio between the list view and 
 
 Enhanced Productivity: By reducing the need to switch screens, the app helps users work more efficiently and reduces cognitive load.
 
-Search and Filter: Advanced search and filtering options are available in the list view to help users quickly find the records they need.
+Search and Filter: Standard Frappe list filters and sorting are available in the list pane.
 
-Easy to Use: Users can navigate between pane view and normal list view in a single toggle click.
+Easy to Use: Switch between Frappe Aspect and the normal list view in a single click.
 
-#### License
+## License
 
-mit
+MIT

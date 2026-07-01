@@ -1,56 +1,354 @@
-/* path/to/your/app/webpane/page/frappe_aspect/frappe_aspect.css */
-.frappe-aspect-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+// Frappe Aspect — full-screen split-pane layout
+// All layout rules use #page-frappe_aspect or body.frappe-aspect-active so standard
+// List/Form/Report views are never affected.
+
+// Navbar width tweak — only while the Frappe Aspect page is open
+body.frappe-aspect-active {
+	.navbar > .container {
+		max-width: 100%;
+		width: 100%;
+		padding-left: var(--padding-md);
+		padding-right: var(--padding-md);
+	}
 }
 
-.frappe-aspect-header {
-    padding: 10px;
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #ddd;
+#page-frappe_aspect {
+	.frappe-aspect-container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+		background: var(--bg-color);
+	}
+
+	.frappe-aspect-body {
+		display: flex;
+		flex-direction: row;
+		flex: 1;
+		overflow: hidden;
+		min-height: 400px;
+	}
+
+	.page-body.container {
+		width: 100%;
+		max-width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	> .page-head {
+		margin-bottom: 0;
+		border-bottom: 1px solid var(--border-color);
+		z-index: 7;
+
+		.container {
+			max-width: 100%;
+			width: 100%;
+			padding-left: var(--padding-md);
+			padding-right: var(--padding-md);
+		}
+
+		.page-head-content {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.layout-main-section {
+		padding: 0;
+		border: none;
+		box-shadow: none;
+		background: transparent;
+	}
+
+	.frappe-aspect-list {
+		flex: none;
+		width: 50%;
+		min-width: 280px;
+		max-width: 75%;
+		height: 100%;
+		overflow-y: auto;
+		overflow-x: hidden;
+		background: var(--card-bg);
+
+	> .page-head {
+		display: none !important;
+	}
+
+	> .container.page-body {
+		width: 100%;
+		max-width: 100%;
+		padding: 0;
+	}
+
+	.layout-side-section {
+		display: none !important;
+	}
+
+	.layout-main-section {
+		padding: 0;
+		border: none;
+		box-shadow: none;
+		min-height: auto;
+	}
+
+	.frappe-list {
+		padding: 0 var(--padding-xs);
+	}
+
+	.page-form {
+		margin: 0;
+		padding: var(--padding-xs);
+		display: flex;
+		flex-wrap: wrap;
+		background-color: var(--card-bg);
+		border-bottom: 1px solid var(--border-color);
+
+		.form-group {
+			padding: 0 5px;
+			margin: 5px 0;
+		}
+
+		.checkbox {
+			margin-top: 4px;
+			margin-bottom: 4px;
+
+			.help-box {
+				display: none;
+			}
+		}
+
+		.standard-filter-section {
+			display: flex;
+			flex-wrap: wrap;
+			flex: 1;
+			width: 100%;
+			gap: 0;
+
+			.form-group,
+			.frappe-control {
+				min-width: 150px;
+				margin-bottom: 0;
+			}
+
+			> .frappe-control,
+			> div[class*="col-"] {
+				flex: 1 1 150px;
+				max-width: 220px;
+				width: auto;
+				padding: 0 5px;
+				margin: 5px 0;
+			}
+		}
+
+		.filter-section {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			width: 100%;
+			padding: 0 var(--padding-xs);
+		}
+
+		.filter-selector .btn-group {
+			margin: var(--margin-xs);
+
+			.filter-label {
+				display: inline-block;
+				font-weight: 600;
+				color: var(--text-color);
+				background-color: var(--control-bg);
+				min-width: 21px;
+				border-radius: 22px;
+			}
+		}
+
+		.filter-button.btn-primary-light {
+			z-index: 1;
+		}
+
+		.sort-selector .btn-group {
+			margin: var(--margin-xs) 0 var(--margin-xs) var(--margin-xs);
+		}
+	}
+
+	.result,
+	.freeze,
+	.no-result {
+		min-height: auto !important;
+	}
+
+	.list-row-container {
+		padding: 0;
+	}
+
+	.list-row-border {
+		margin: 0 var(--padding-xs);
+	}
+
+	.list-row {
+		padding: var(--padding-xs) var(--padding-sm);
+		border-radius: 0;
+		transition: background-color 0.12s ease;
+
+		&:hover {
+			background-color: var(--highlight-color);
+		}
+
+		&.frappe-aspect-selected {
+			background-color: var(--control-bg);
+			box-shadow: inset 3px 0 0 var(--primary);
+		}
+	}
+
+	.list-paging-area {
+		border-top: 1px solid var(--border-color);
+		background: var(--card-bg);
+	}
+	}
+
+	.o_frappe_aspect_splitter {
+		flex: 0 0 8px;
+		width: 8px;
+		min-width: 8px;
+		cursor: col-resize;
+		background: var(--border-color);
+		position: relative;
+		z-index: 10;
+		flex-shrink: 0;
+		transition: background-color 0.15s ease;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 2px;
+			height: 32px;
+			border-radius: 2px;
+			background: var(--gray-400);
+			opacity: 0.6;
+		}
+
+		&:hover,
+		&:active {
+			background: var(--gray-300);
+
+			&::after {
+				opacity: 1;
+				background: var(--primary);
+			}
+		}
+
+		.frappe-aspect-reset-pane {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 11;
+			width: 22px;
+			height: 22px;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			box-shadow: var(--shadow-sm);
+			opacity: 0.9;
+
+			&:hover,
+			&:focus {
+				opacity: 1;
+			}
+		}
+	}
+
+	.frappe-aspect-form {
+		flex: 1 1 auto;
+		min-width: 0;
+		height: 100%;
+		overflow-y: auto;
+		overflow-x: hidden;
+		background: var(--bg-color);
+		position: relative;
+
+		.layout-side-section {
+			display: none !important;
+		}
+
+		> .page-head .standard-actions .prev-doc,
+		> .page-head .standard-actions .next-doc {
+			display: none !important;
+		}
+
+		.page-head {
+			position: sticky;
+			top: 0;
+			z-index: 5;
+			margin-bottom: 0;
+			border-bottom: 1px solid var(--border-color);
+			background: var(--card-bg);
+		}
+
+		.form-layout,
+		.form-page {
+			max-width: 100%;
+		}
+
+		.form-page {
+			padding: var(--padding-sm) var(--padding-md);
+		}
+
+		.form-tabs-list {
+			position: sticky;
+			top: 0;
+			z-index: 4;
+			background: var(--card-bg);
+		}
+	}
+
+	.frappe-aspect-form-empty {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		min-height: 300px;
+		width: 100%;
+		background: var(--subtle-fg);
+		color: var(--text-muted);
+
+		.empty-state-content {
+			text-align: center;
+			padding: var(--padding-xl);
+			max-width: 320px;
+
+			.empty-icon {
+				font-size: 48px;
+				margin-bottom: var(--margin-md);
+				opacity: 0.35;
+				color: var(--gray-500);
+			}
+
+			.empty-title {
+				font-size: var(--text-lg);
+				font-weight: var(--weight-semibold);
+				color: var(--text-color);
+				margin-bottom: var(--margin-xs);
+			}
+
+			.empty-hint {
+				font-size: var(--text-sm);
+				line-height: 1.5;
+			}
+		}
+	}
+
+	.frappe-aspect-form.has-doc .frappe-aspect-form-empty {
+		display: none;
+	}
 }
 
-.frappe-aspect-body {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    overflow: hidden;
-}
-
-.frappe-aspect-list {
-    flex: 0 0 auto;
-    width: 50%;
-    height: 100vh;
-    overflow-y: auto;
-    border-right: 1px solid #ddd;
-}
-.o_frappe_aspect_splitter {
-    flex: 0 0 auto;
-    width: 8px;
-    background: url(/assets/frappe_aspect/img/vsizegrip.png) center center no-repeat lightgray;
-    min-height: 200px;
-    cursor: col-resize;
-
-    &:hover {
-        background: url(/assets/frappe_aspect/img/vsizegrip.png) center center no-repeat darken(lightgray, 15%);
-    }
-}
-#frappe-aspect-list .page-form{
-    flex-direction: column;
-}
-.frappe-aspect-form {
-    flex: 1 1 auto;
-    width: 70000%;
-    height: 100vh;
-    overflow: auto;
-    .form-tabs-list{
-        position: static;
-    }
-}
-#frappe-aspect-form .page-head{
-    top: 0px !important;
-}
-#page-frappe_aspect > .page-head{
-    z-index: 7;
+body.frappe-aspect-resizing {
+	cursor: col-resize !important;
+	user-select: none;
 }
