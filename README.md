@@ -1,12 +1,18 @@
 ## Frappe Aspect
 
-**Developer:** Ahmed Shihata  
-**Email:** ahmedshihata1305@gmail.com  
-**Copyright:** 2026
-
 ## Overview
 
 Frappe Aspect adds a resizable split-screen workspace for ERPNext and Frappe — a list on one side and an editable form on the other — so you can browse and edit records without switching pages.
+
+## Screenshots
+
+Open **Frappe Aspect** from the list view menu on any DocType:
+
+![Frappe Aspect in list view menu](docs/images/view-menu.png)
+
+Browse records and edit details side by side in one screen:
+
+![Frappe Aspect split view](docs/images/split-view.png)
 
 ## Features
 
