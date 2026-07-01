@@ -10,7 +10,7 @@ frappe.search.AwesomeBar = class extends frappe.search.AwesomeBar {
         const filteredOptions = options.filter(option => {
             // Modify the condition based on your requirements
             // Here, we're assuming 'frappe_aspect' is part of the value property
-            return !(option.value.includes("Frappe Aspect") || option.value.includes("frappe_aspect"));
+            return !(option.value.includes("Aspect View") || option.value.includes("frappe_aspect"));
         });
 
         return filteredOptions;
