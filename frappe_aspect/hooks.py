@@ -1,8 +1,8 @@
 app_name = "frappe_aspect"
 app_title = "Frappe Aspect"
-app_publisher = "Kanak Infosystems LLP."
+app_publisher = "Ahmed Shihata"
 app_description = "Frappe Aspect"
-app_email = "info@kanakinfosystems.com"
+app_email = "ahmedshihata1305@gmail.com"
 app_license = "mit"
 # required_apps = []
 
