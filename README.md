@@ -6,13 +6,13 @@ Frappe Aspect adds a resizable split-screen workspace for ERPNext and Frappe —
 
 ## Screenshots
 
-Open **Frappe Aspect** from the list view menu on any DocType:
+Open **Aspect View** from the list view menu on any DocType:
 
-![Frappe Aspect in list view menu](docs/images/view-menu.png)
+![Aspect View in list view menu](docs/images/view-menu.png)
 
 Browse records and edit details side by side in one screen:
 
-![Frappe Aspect split view](docs/images/split-view.png)
+![Aspect View split view](docs/images/split-view.png)
 
 ## Features
 
@@ -28,7 +28,7 @@ Enhanced Productivity: By reducing the need to switch screens, the app helps use
 
 Search and Filter: Standard Frappe list filters and sorting are available in the list pane.
 
-Easy to Use: Switch between Frappe Aspect and the normal list view in a single click.
+Easy to Use: Switch between Aspect View and the normal list view in a single click.
 
 ## License
 
