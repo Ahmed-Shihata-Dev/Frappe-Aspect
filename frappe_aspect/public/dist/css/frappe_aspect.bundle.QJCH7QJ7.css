@@ -1,9 +1,9 @@
-/* ../../../../../tmp/tmp-86580-w0VT6hTHdwEG/frappe_aspect/frappe_aspect/public/scss/frappe_aspect.bundle.css */
+/* ../../../../../tmp/tmp-114570-FrEGGBdy0Ye0/frappe_aspect/frappe_aspect/public/scss/frappe_aspect.bundle.css */
 body.frappe-aspect-active .navbar > .container {
   max-width: 100%;
   width: 100%;
-  padding-right: var(--padding-md);
   padding-left: var(--padding-md);
+  padding-right: var(--padding-md);
 }
 #page-frappe_aspect .frappe-aspect-container {
   display: flex;
@@ -22,8 +22,8 @@ body.frappe-aspect-active .navbar > .container {
 #page-frappe_aspect .page-body.container {
   width: 100%;
   max-width: 100%;
-  padding-right: 0;
   padding-left: 0;
+  padding-right: 0;
 }
 #page-frappe_aspect > .page-head {
   margin-bottom: 0;
@@ -33,12 +33,12 @@ body.frappe-aspect-active .navbar > .container {
 #page-frappe_aspect > .page-head .container {
   max-width: 100%;
   width: 100%;
-  padding-right: var(--padding-md);
   padding-left: var(--padding-md);
+  padding-right: var(--padding-md);
 }
 #page-frappe_aspect > .page-head .page-head-content {
-  padding-right: 0;
   padding-left: 0;
+  padding-right: 0;
 }
 #page-frappe_aspect .layout-main-section {
   padding: 0;
@@ -137,7 +137,7 @@ body.frappe-aspect-active .navbar > .container {
   z-index: 1;
 }
 #page-frappe_aspect .frappe-aspect-list .page-form .sort-selector .btn-group {
-  margin: var(--margin-xs) var(--margin-xs) var(--margin-xs) 0;
+  margin: var(--margin-xs) 0 var(--margin-xs) var(--margin-xs);
 }
 #page-frappe_aspect .frappe-aspect-list .result,
 #page-frappe_aspect .frappe-aspect-list .freeze,
@@ -160,7 +160,7 @@ body.frappe-aspect-active .navbar > .container {
 }
 #page-frappe_aspect .frappe-aspect-list .list-row.frappe-aspect-selected {
   background-color: var(--control-bg);
-  box-shadow: inset -3px 0 0 var(--primary);
+  box-shadow: inset 3px 0 0 var(--primary);
 }
 #page-frappe_aspect .frappe-aspect-list .list-paging-area {
   border-top: 1px solid var(--border-color);
@@ -181,8 +181,8 @@ body.frappe-aspect-active .navbar > .container {
   content: "";
   position: absolute;
   top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 2px;
   height: 32px;
   border-radius: 2px;
@@ -201,8 +201,8 @@ body.frappe-aspect-active .navbar > .container {
 #page-frappe_aspect .o_frappe_aspect_splitter .frappe-aspect-reset-pane {
   position: absolute;
   top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 11;
   width: 22px;
   height: 22px;
@@ -295,4 +295,4 @@ body.frappe-aspect-resizing {
   -moz-user-select: none;
   user-select: none;
 }
-/*# sourceMappingURL=frappe_aspect.bundle.Y4HQ6IVE.css.map */
+/*# sourceMappingURL=frappe_aspect.bundle.QJCH7QJ7.css.map */
